@@ -19,6 +19,6 @@ export interface MovieState {
   selectedMovie: Movie | null;
 }
 
-export interface InputType {
+export interface ButtonType {
   type?: "button" | "submit" | "reset" | undefined;
 }

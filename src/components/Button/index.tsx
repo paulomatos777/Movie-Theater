@@ -1,20 +1,18 @@
-import React, { ButtonHTMLAttributes } from "react";
-import { Container } from "./styles";
+import ButtonComponent from "react-bootstrap/Button";
+import { ButtonType } from "../../store/types";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+interface InputProps {
+  variant: string;
+  type: ButtonType["type"];
+  text: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  variant = "primary",
-  ...rest
-}) => {
+function Button({ variant, type, text }: InputProps) {
   return (
-    <Container variant={variant} {...rest}>
-      {children}
-    </Container>
+    <ButtonComponent variant={variant} type={type}>
+      {text}
+    </ButtonComponent>
   );
-};
+}
 
 export default Button;

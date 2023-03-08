@@ -15,7 +15,9 @@ export default function MyCard({ title, text, hasButton }: MyCardProps) {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{text}</Card.Text>
-          {hasButton && <Button variant="primary">Go somewhere</Button>}
+          {hasButton && (
+            <Button variant="primary" type="submit" text={text}></Button>
+          )}
         </Card.Body>
       </Card>
     </CardContainer>
