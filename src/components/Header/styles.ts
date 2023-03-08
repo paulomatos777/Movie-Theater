@@ -7,7 +7,7 @@ export const headerStyles = {
     alignItems: "center",
     height: "70px",
     padding: "0 20px",
-    backgroundColor: "#3f51b5",
+    backgroundColor: "#0d6efd",
     color: "#ffffff",
   },
   title: {

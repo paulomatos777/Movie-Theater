@@ -4,17 +4,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
-// import store from "./store";
 import { render } from "react-dom";
 import { configureStore } from "@reduxjs/toolkit";
-// import rootReducer from "./rootReducer";
 import thunkMiddleware from "redux-thunk";
-import rootReducer from "./store/sagas";
 import movies from "./store/slices/movies";
 
-// const root = ReactDOM.createRoot(
-//   document.getElementById("root") as HTMLElement
-// );
+
 
 const store = configureStore({
   reducer: movies,

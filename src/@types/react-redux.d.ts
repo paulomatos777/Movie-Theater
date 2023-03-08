@@ -1,5 +1,5 @@
 import "react-redux";
-import { StoreState } from "src/store";
+import { StoreState } from "../store";
 
 declare module "react-redux" {
   interface DefaultRootState extends StoreState {}

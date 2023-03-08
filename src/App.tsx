@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Movie from "./pages/Movie";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Header title="Cinema" />
       <Movie></Movie>
+      <Footer></Footer>
     </div>
   );
 }
