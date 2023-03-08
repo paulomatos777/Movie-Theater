@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Input from "../../components/Input";
 import { MovieActions } from "../../store/slices/movies";
-// import MyCard from "../../components/Card";
 import { Movie as moviee, MovieState } from "../../store/types";
 
 export default function Movie() {
@@ -18,7 +18,7 @@ export default function Movie() {
 
   useEffect(() => {
     const fetchAndSetMovie = async () => {
-      const data = await fetchMovie("skyfall", "8384263e");
+      const data = await fetchMovie("avatar", "8384263e");
       setMovie(data);
       dispatch(MovieActions.fetchMovieDataSuccess(data));
     };
@@ -27,11 +27,37 @@ export default function Movie() {
 
   return (
     <div>
+      <Input variant="primary" type="submit" text="Search" />
+
       {movie ? (
         <div>
-          <h1>{movie.Title}</h1>
-          <p>{movie.Plot}</p>
-          <img src={movie.Poster} alt="" />
+          <div className="row">
+            <div className="col">
+              <h1>{movie.Title}</h1>
+              <p>{movie.Plot}</p>
+              <p>
+                <strong> Year:</strong> {movie.Year}
+              </p>
+              <p>
+                <strong>Duration: </strong> {movie.Runtime}
+              </p>
+              <p>
+                <strong>Genre: </strong> {movie.Genre}
+              </p>
+              <p>
+                <strong>Director: </strong> {movie.Director}
+              </p>
+              <p>
+                <strong>Awards: </strong> {movie.Awards}
+              </p>
+              <p>
+                <strong>imdbRating: </strong> {movie.imdbRating}
+              </p>
+            </div>
+            <div className="col">
+              <img src={movie.Poster} alt="" />
+            </div>
+          </div>
         </div>
       ) : (
         <p>Loading...</p>

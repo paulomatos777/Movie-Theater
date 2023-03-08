@@ -11,9 +11,14 @@ export interface Movie {
   Language?: string;
   Country?: string;
   imdbRating?: string;
+  Awards: string;
 }
 
 export interface MovieState {
   loading: boolean;
   selectedMovie: Movie | null;
+}
+
+export interface InputType {
+  type?: "button" | "submit" | "reset" | undefined;
 }

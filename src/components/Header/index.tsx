@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../Nav";
-import { headerStyles } from "./styles";
+import { headerStyles, TextHeader } from "./styles";
 
 interface HeaderProps {
   title: string;
@@ -9,11 +9,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <header style={headerStyles.header}>
-      <h1 style={headerStyles.title}>{title}</h1>
+      <TextHeader>
+        <h1 style={headerStyles.title}>{title}</h1>
+      </TextHeader>
       <Nav></Nav>
-      {/* <a href="#" style={headerStyles.link}>
-        Link
-      </a> */}
     </header>
   );
 };

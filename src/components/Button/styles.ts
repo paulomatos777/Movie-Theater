@@ -1,6 +1,6 @@
 import { Button as MyButton, ButtonProps } from "react-bootstrap";
 import { ButtonVariant } from "react-bootstrap/esm/types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export interface ContainerProps extends ButtonProps {
   icon?: boolean;

@@ -1,15 +1,24 @@
-import { InputHTMLAttributes } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { InputType } from "../../store/types";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string;
+interface InputProps {
+  variant: string;
+  type: InputType["type"];
+  text: string;
 }
 
-const Input: React.FC<InputProps> = (props) => {
+function Input({ variant, type, text }: InputProps) {
   return (
-    <div>
-      <input {...props} />
-    </div>
+    <Form>
+      <Form.Group className="mb-5" controlId="formBasicEmail">
+        <Form.Control type="email" placeholder="Search a movie" />
+      </Form.Group>
+      <Button variant={variant} type={type}>
+        {text}
+      </Button>
+    </Form>
   );
-};
+}
 
 export default Input;

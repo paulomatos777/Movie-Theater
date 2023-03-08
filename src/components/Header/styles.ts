@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export const headerStyles = {
   header: {
     display: "flex",
@@ -24,3 +26,9 @@ export const headerStyles = {
     textDecoration: "underline",
   },
 };
+
+export const TextHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
