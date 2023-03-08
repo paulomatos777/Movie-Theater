@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "react-bootstrap";
+import { Button as MyButton, ButtonProps } from "react-bootstrap";
 import { ButtonVariant } from "react-bootstrap/esm/types";
 import styled, { css } from "styled-components";
 
@@ -11,7 +11,7 @@ export interface ContainerProps extends ButtonProps {
   variant?: ButtonVariant;
 }
 
-export const Container = styled(Button)<ContainerProps>`
+export const Container = styled(MyButton)<ContainerProps>`
   .btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;

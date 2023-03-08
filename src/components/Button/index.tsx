@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
-import "./styles.ts";
+import { Container } from "./styles";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
@@ -11,9 +11,9 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   return (
-    <button className={`btn btn-${variant}`} {...rest}>
+    <Container variant={variant} {...rest}>
       {children}
-    </button>
+    </Container>
   );
 };
 
