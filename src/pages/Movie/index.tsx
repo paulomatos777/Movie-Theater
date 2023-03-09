@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Spinner from "../../components/Spinner";
@@ -8,6 +8,8 @@ import store from "../../store";
 import { MovieActions } from "../../store/slices/movies";
 import { Movie as MovieType } from "../../store/types";
 import { Container } from "./styles";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Movie() {
   const [searchValue, setSearchValue] = useState("");
@@ -22,7 +24,7 @@ export default function Movie() {
 
   function fetchMovie(title: string, apiKey: string) {
     const url = `http://www.omdbapi.com/?t=${title}&apikey=${apiKey}`;
-    toast.success("Filme Encontrado");
+
     return fetch(url).then((response) => response.json());
   }
   const [movie, setMovie] = useState<MovieType | null>(null);
@@ -31,16 +33,19 @@ export default function Movie() {
     const apiKey = "8384263e";
     fetchMovie(searchValue, apiKey).then((data) => {
       setMovie(data);
+      console.log("resposta:", movie?.Response);
+      if (data.Response === "True") {
+        toast.success("That's great, Movie Found!");
+      } else {
+        toast.error("Oh no, Movie not Found!");
+      }
       dispatch(MovieActions.fetchMovieDataSuccess(data));
-      toast.success("Filme Encontrado");
     });
-    if (movie?.Response === "True") {
-      toast.success("Filme Encontrado");
-    }
   }
 
   return (
     <Container>
+      <ToastContainer />
       <div>
         <tr className="s-btn">
           <td>
