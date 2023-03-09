@@ -21,7 +21,12 @@ export const Container = styled.div`
     justify-content: center;
   }
   .empty-search {
-    text-align: center;
-    background-color: aliceblue;
+    h6 {
+      text-align: center;
+      background-color: aliceblue;
+    }
+    img {
+      max-width: 40%;
+    }
   }
 `;

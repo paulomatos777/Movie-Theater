@@ -6,9 +6,12 @@ import Movie from "./pages/Movie";
 function App() {
   return (
     <div className="App">
-      <Header title="" />
-      <Movie></Movie>
-      <Footer></Footer>
+      <div className="wrapper">
+        {" "}
+        <Header title="" />
+        <Movie></Movie>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { Movie as MovieType } from "../../store/types";
 import { Container } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import pana from "../../assets/Film rolls-pana.png";
 
 export default function Movie() {
   const [searchValue, setSearchValue] = useState("");
@@ -90,9 +91,7 @@ export default function Movie() {
                     </>
                   </div>
                 ) : (
-                  <h6 className="error-msg">
-                    movie not found, please try with another title{" "}
-                  </h6>
+                  ""
                 )}
               </div>
               <div className="col">
@@ -102,7 +101,10 @@ export default function Movie() {
           </div>
         ) : (
           <>
-            <h6 className="empty-search">None movies searched yet</h6>
+            <div className="empty-search">
+              <h6>None movies searched yet</h6>
+              <img src={pana} alt="" />
+            </div>
           </>
         )}
       </div>
