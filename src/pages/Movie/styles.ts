@@ -9,4 +9,19 @@ export const Container = styled.div`
       margin: 2px;
     }
   }
+
+  .film-desc {
+    text-align: left;
+    margin-left: 2%;
+  }
+
+  .error-msg {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
+  .empty-search {
+    text-align: center;
+    background-color: aliceblue;
+  }
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../Nav";
-import { headerStyles, TextHeader } from "./styles";
+import { headerStyles, Img, TextHeader } from "./styles";
+import logo from "../../assets/logo-movie.png";
 
 interface HeaderProps {
   title: string;
@@ -9,9 +10,11 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <header style={headerStyles.header}>
-      <TextHeader>
-        <h1 style={headerStyles.title}>{title}</h1>
-      </TextHeader>
+      <Img>
+        {" "}
+        <img className="img" src={logo} alt="logo-cine" />
+      </Img>
+
       <Nav></Nav>
     </header>
   );

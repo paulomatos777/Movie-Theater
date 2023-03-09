@@ -12,6 +12,7 @@ export interface Movie {
   Country?: string;
   imdbRating?: string;
   Awards: string;
+  Response: string;
 }
 
 export interface MovieState {

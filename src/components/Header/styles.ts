@@ -32,3 +32,11 @@ export const TextHeader = styled.div`
   justify-content: center;
   text-align: center;
 `;
+
+export const Img = styled.div`
+  .img {
+    /* background-color: red; */
+    width: 30%;
+    display: flex;
+  }
+`;
