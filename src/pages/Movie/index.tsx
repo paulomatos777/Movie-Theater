@@ -35,7 +35,7 @@ export default function Movie() {
     const apiKey = "8384263e";
     fetchMovie(searchValue, apiKey).then((data) => {
       setMovie(data);
-      console.log("resposta:", movie?.Response);
+
       if (data.Response === "True") {
         toast.success("That's great, Movie Found!");
       } else {
