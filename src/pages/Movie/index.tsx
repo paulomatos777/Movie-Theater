@@ -10,11 +10,11 @@ import { Movie as MovieType } from "../../store/types";
 import { Container } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import pana from "../../assets/Film rolls-pana.png";
 import Carrousel from "../../components/Carrousel";
 
 export default function Movie() {
   const [searchValue, setSearchValue] = useState("");
+  const api = "http://localhost:3000";
 
   function handleSearchInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     setSearchValue(event.target.value);
@@ -25,7 +25,7 @@ export default function Movie() {
   const dispatch = useDispatch();
 
   function fetchMovie(title: string, apiKey: string) {
-    const url = `http://www.omdbapi.com/?t=${title}&apikey=${apiKey}`;
+    const url = `${api}/movie?title=${title}&apikey=${apiKey}`;
 
     return fetch(url).then((response) => response.json());
   }
