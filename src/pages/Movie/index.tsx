@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import Button from "../../components/Button";
@@ -9,7 +8,6 @@ import store from "../../store";
 import { MovieActions } from "../../store/slices/movies";
 import { Movie as MovieType } from "../../store/types";
 import { Container } from "./styles";
-import menu from "../../assets/logo-menu.jpg";
 
 export default function Movie() {
   const [searchValue, setSearchValue] = useState("");
