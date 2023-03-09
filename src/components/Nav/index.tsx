@@ -24,7 +24,10 @@ function BasicExample() {
             <Nav.Link href="https://github.com/paulomatos777" className="link">
               Github
             </Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/feed/" className="link">
+            <Nav.Link
+              href="https://www.linkedin.com/in/paulomatos77/"
+              className="link"
+            >
               Linkedin
             </Nav.Link>
             <Nav.Link
