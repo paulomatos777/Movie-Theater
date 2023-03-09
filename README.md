@@ -1,3 +1,8 @@
+```O Nest Js já usa a porta 3000 como padrão então provavelmente o react será direcionado para outra porta```
+
+
+```É necessário adicionar REACT_APP_API_URL=http://localhost:3000 no env para conectar ao servidor ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
