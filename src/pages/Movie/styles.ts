@@ -26,7 +26,7 @@ export const Container = styled.div`
       background-color: aliceblue;
     }
     img {
-      max-width: 40%;
+      max-width: 20%;
     }
   }
 `;

@@ -11,6 +11,7 @@ import { Container } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import pana from "../../assets/Film rolls-pana.png";
+import Carrousel from "../../components/Carrousel";
 
 export default function Movie() {
   const [searchValue, setSearchValue] = useState("");
@@ -102,8 +103,7 @@ export default function Movie() {
         ) : (
           <>
             <div className="empty-search">
-              <h6>None movies searched yet</h6>
-              <img src={pana} alt="" />
+              <Carrousel />
             </div>
           </>
         )}
